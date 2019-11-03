@@ -40,20 +40,22 @@ def multi_knapsack(data_list, total_volume_capacity, total_weight_capacity):
     final_weight = 0
     final_volume = 0
     final_profit = 0
-    for i in sortedList:
-        node = i[0]
+    for i in range(len(sortedList)-1, -1, -1):
+        node = sortedList[i][0]
         if (weight_vec[node] + final_weight <= total_weight_capacity) & \
                 (volume_vec[node] + final_volume <= total_volume_capacity):
-            final_list.append(node)
+            final_list.append(node+1)
             final_volume += volume_vec[node]
             final_weight += weight_vec[node]
             final_profit += profit_vec[node]
+
     return final_volume, final_weight, final_list, final_profit
 
 
 if __name__ == '__main__':
 
     for file_no in range(1, 13):
+
         result = {}
         input_file = "mkdp" + str(file_no) + ".txt"
         file = r'C:/Users/batuhan.organ/Desktop/IEOzU/IE504/IE504/Data/HW1_Q2_input/' + input_file
@@ -70,3 +72,5 @@ if __name__ == '__main__':
             result_string = result_string + y+ ':'+ str(result[file_no][y]) +'\n'
         f.write(result_string)
         f.close()
+
+
