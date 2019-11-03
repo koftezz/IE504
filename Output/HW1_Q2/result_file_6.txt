@@ -1,4 +1,4 @@
-Final List:[7, 14, 19, 6, 15, 0, 10, 17, 16, 1]
-Final Profit:18823.0
-Final Weight:347.79999999999995
-Final Volume:3173.5000000000005
+Final List:[12, 10, 3, 5, 13, 19, 9, 14, 2, 17, 6, 16]
+Final Profit:50761.0
+Final Weight:418.09999999999997
+Final Volume:3232.9
